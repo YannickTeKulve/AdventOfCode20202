@@ -9,9 +9,9 @@ import (
 func task1(input string) int {
 	var splitPerElf = strings.Split(input, "\n\n")
 	var highest int
-	for i := 0; i < len(splitPerElf); i++ {
+	for _, valueE := range splitPerElf {
 		var parsedCalories = []int{}
-		var caloriesPerElf = strings.Split(splitPerElf[i], "\n")
+		var caloriesPerElf = strings.Split(valueE, "\n")
 		for _, calorie := range caloriesPerElf {
 			parsed, _ := strconv.Atoi(calorie)
 			parsedCalories = append(parsedCalories, parsed)
@@ -27,9 +27,9 @@ func task1(input string) int {
 func task2(input string) int {
 	var splitPerElf = strings.Split(input, "\n\n")
 	var highest = []int{0, 0, 0}
-	for i := 0; i < len(splitPerElf); i++ {
+	for _, valueE := range splitPerElf {
 		var parsedCalories = []int{}
-		var caloriesPerElf = strings.Split(splitPerElf[i], "\n")
+		var caloriesPerElf = strings.Split(valueE, "\n")
 		for _, calorie := range caloriesPerElf {
 			parsed, _ := strconv.Atoi(calorie)
 			parsedCalories = append(parsedCalories, parsed)
